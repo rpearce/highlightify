@@ -1,0 +1,30 @@
+{
+  "name": "highlightify",
+  "version": "0.0.1",
+  "homepage": "https://github.com/articulate/highlightify",
+  "author": "Articulate",
+  "description": "Highlight portions of text given text, a filter and an optional className.",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/articulate/highlightify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/articulate/highlightify/issues"
+  },
+  "keywords": [
+    "highlight",
+    "filter",
+    "match"
+  ],
+  "devDependencies": {
+    "chai": "^2.0.0",
+    "coffee-script": "^1.9.0",
+    "mocha": "^2.1.0"
+  },
+  "scripts": {
+    "prepublish": "coffee -o lib -c src/*.coffee",
+    "test": "mocha --compilers coffee:coffee-script/register"
+  }
+}
