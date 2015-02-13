@@ -1,4 +1,4 @@
-Highlightify = require '../src/Highlightify'
+Highlightify = require '../src/highlightify'
 chai = require 'chai'
 expect = chai.expect
 
