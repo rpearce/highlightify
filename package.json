@@ -24,7 +24,7 @@
     "mocha": "^2.1.0"
   },
   "scripts": {
-    "prepublish": "coffee -o lib -c src/*.coffee",
+    "prepublish": "node_modules/.bin/coffee -o lib -c src/*.coffee",
     "test": "mocha --compilers coffee:coffee-script/register"
   }
 }
