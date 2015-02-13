@@ -1,6 +1,6 @@
 Highlightify =
   highlightMatches: (opts) ->
-    if not opts?.text or not opts?.filter
+    if not (opts?.text and opts?.filter)
       throw 'Highlightify.highlightMatches requires `text` and `filter` options'
 
     className = opts.className or 'highlightify-is-match'
