@@ -23,26 +23,26 @@ describe 'Highlightify', ->
   describe 'highlighting', ->
     it 'highlights at the beginning', ->
       result = Highlightify.highlightMatches(text: 'foobar', filter: 'fo')
-      expect(result).to.equal('<span class="is-match">fo</span>obar')
+      expect(result).to.equal('<span class="highlightify-is-match">fo</span>obar')
 
     it 'highlights in the middle', ->
       result = Highlightify.highlightMatches(text: 'foobar', filter: 'ob')
-      expect(result).to.equal('fo<span class="is-match">ob</span>ar')
+      expect(result).to.equal('fo<span class="highlightify-is-match">ob</span>ar')
 
     it 'highlights at the end', ->
       result = Highlightify.highlightMatches(text: 'foobar', filter: 'bar')
-      expect(result).to.equal('foo<span class="is-match">bar</span>')
+      expect(result).to.equal('foo<span class="highlightify-is-match">bar</span>')
 
     it 'highlights multiple matches', ->
       result = Highlightify.highlightMatches(text: 'foobar true bar', filter: 'bar')
-      expect(result).to.equal('foo<span class="is-match">bar</span> true <span class="is-match">bar</span>')
+      expect(result).to.equal('foo<span class="highlightify-is-match">bar</span> true <span class="highlightify-is-match">bar</span>')
 
   describe 'highlight className', ->
-    it 'uses `is-match` by default', ->
+    it 'uses `highlightify-is-match` by default', ->
       result = Highlightify.highlightMatches(text: 'foobar', filter: 'fo')
-      expect(result).to.match(/is-match/)
+      expect(result).to.match(/highlightify-is-match/)
 
     it 'uses a custom className if provided', ->
       result = Highlightify.highlightMatches(text: 'foobar', filter: 'fo', className: 'is-highlighted')
-      expect(result).to.not.match(/is-match/)
+      expect(result).to.not.match(/highlightify-is-match/)
       expect(result).to.match(/is-highlighted/)
