@@ -60,4 +60,3 @@ Simply include the `dist` script on the page to gain access to it. There are dev
 1. Make your changes and push your branch to your GitHub repo
 1. Create a pull request from your branch to this repo's master
 1. When all is merged, pull down the upstream changes to your master
-
