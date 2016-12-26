@@ -2,7 +2,7 @@
 Highlight portions of text given text, a filter and an optional className.
 
 ## Installation
-```shell
+```
 $ npm install highlightify --save
 ```
 
@@ -11,7 +11,7 @@ $ npm install highlightify --save
 ### Node/Browserify/CommonJS
 First, install it via NPM and save it to your project:
 
-```sh
+```
 $ npm install highlightify --save
 ```
 
@@ -27,12 +27,13 @@ or if you are using < ES2015,
 var Highlightify= require('highlightify');
 ```
 
-and then call it with `text`, `filter`, and/or a `className` option:
+and then call it with `text`, `filter`, and/or optional `tagName` or `className` options:
 
 ```js
 Highlightify({
   text: 'some text to match against', // required
   filter: 'ext', // required
+  tagName: 'span', // optional. default: 'mark'
   className: 'is-highlighted' // optional. default: 'highlightify-is-match'
 });
 // => 'some t<span class="is-highlighted">ext</span> to match against'
